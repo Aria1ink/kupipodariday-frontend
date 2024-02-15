@@ -17,8 +17,7 @@ module.exports = {
       key: '~/.ssh/id_ed25519',
       repo: 'git@github.com:Aria1ink/kupipodariday-frontend.git',
       path: DEPLOY_PATH,
-      'pre-deploy': 'npm i && npm run build',
-      'post-deploy': `chmod +x ${DEPLOY_PATH}`,
+      'post-deploy': 'npm i && npm run build'
     },
   },
 };
