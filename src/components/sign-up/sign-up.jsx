@@ -41,7 +41,7 @@ export const SignUp = ({ extraClass = "" }) => {
     const emailValid = EMAIL_REGULAR.test(userData.email);
     const descriptionValid = userData.about.length < MAXIMUM_DESCRIPTION_LENGTH;
     const avatarValid = userData.avatar
-      ? URL_REGULAR.test(userData.avatar)
+      ? !URL_REGULAR.test(userData.avatar)
       : true;
 
     setStepOneDisabled(!usernameValid || !passwordValid || !emailValid);
